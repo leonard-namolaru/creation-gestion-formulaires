@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+ <!-- ********************************** Site encodé en UTF-8 **************************************** -->
+
+	<filter>
+	    <filter-name>Set Character Encoding</filter-name>
+	    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+	    <init-param>
+	        <param-name>encoding</param-name>
+	        <param-value>UTF-8</param-value>
+	    </init-param>
+	    <init-param>
+	        <param-name>ignore</param-name>
+	        <param-value>false</param-value>
+	    </init-param>
+	</filter>
+	
+	<filter-mapping>
+	    <filter-name>Set Character Encoding</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+<!-- **************************** Initialisation du DAOFactory **************************************** -->
+
+	<listener>
+		<listener-class>com.sdzee.config.InitialisationDaoFactory</listener-class>
+    </listener>
+    
+ <!-- *************************** Filtrage de certaines page du site************************************ -->
+	<filter>
+  		<filter-name>RestrictionFilter</filter-name>
+  		<filter-class>com.sdzee.filters.RestrictionFilter</filter-class>	
+  	</filter>
+
+	
+	<filter-mapping>
+    	<filter-name>RestrictionFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+	</filter-mapping>  
+	
+ <!-- ************ La session d'un utilisateur sera fermé après 15min de non utilisateur***************** -->
+
+	<session-config> 
+		<session-timeout>15</session-timeout>
+	</session-config> 
+	
+ <!-- *********************************** Page d'accueil non connectée *********************************** -->
+ 
+  	<servlet>
+    	<servlet-name>Accueil</servlet-name>
+    	<servlet-class>com.sdzee.servlets.Accueil</servlet-class>
+  	</servlet>
+  	
+ 	<servlet-mapping>
+    	<servlet-name>Accueil</servlet-name>
+    	<url-pattern>/index.jsp</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- *************************** Connexion d'un utilisateur ou administrateur ************************** -->
+ 
+  	<servlet>
+    	<servlet-name>Connexion</servlet-name>
+    	<servlet-class>com.sdzee.servlets.Connexion</servlet-class>
+  	</servlet>
+  	
+ 	<servlet-mapping>
+    	<servlet-name>Connexion</servlet-name>
+    	<url-pattern>/connexion</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- ********************** Deconnexion d'un l'utilisateur ou admnistrateur *************************** -->
+ 
+  	<servlet>
+    	<servlet-name>Deconnexion</servlet-name>
+    	<servlet-class>com.sdzee.servlets.Deconnexion</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+    	<servlet-name>Deconnexion</servlet-name>
+    	<url-pattern>/deconnexion</url-pattern>
+  	</servlet-mapping>
+  	
+<!-- ********************************** Inscription d'un l'utilisateur ********************************* -->  
+	<servlet>
+		<servlet-name>Inscription</servlet-name>
+		<servlet-class>com.sdzee.servlets.Inscription</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Inscription</servlet-name>
+		<url-pattern>/page-inscription</url-pattern>
+	</servlet-mapping>
+	
+<!-- **************************** Page d'accueil d'un utilisateur connecté ****************************** -->   
+	
+	<servlet>
+    	<servlet-name>Utilisateur_connecte</servlet-name>
+    	<servlet-class>com.sdzee.servlets.Utilisateur_connecte</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>Utilisateur_connecte</servlet-name>
+    	<url-pattern>/page-accueil</url-pattern>
+  	</servlet-mapping> 
+  	
+<!-- ***************** Mise à jour des données personnelles d'un l'utilisateur ************************* --> 
+ 	
+ 	<servlet>
+    	<servlet-name>UpdateUtilisateur</servlet-name>
+    	<servlet-class>com.sdzee.servlets.UpdateUtilisateur</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>UpdateUtilisateur</servlet-name>
+    	<url-pattern>/mes-donnees-personnelles</url-pattern>
+  	</servlet-mapping>
+  	
+<!-- ************************* Retrouver le mot de passe d'un utilisateur ****************************** --> 
+ 	<servlet>
+    	<servlet-name>RetrouverMotDePasse</servlet-name>
+    	<servlet-class>com.sdzee.servlets.RetrouverMotDePasse</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>RetrouverMotDePasse</servlet-name>
+    	<url-pattern>/motdepasse-oublie</url-pattern>
+  	</servlet-mapping>
+  	
+<!-- ******************************** Paramétrage d'une catégorie ************************************** -->  
+	
+	<servlet>
+    	<servlet-name>ParametresCategorie</servlet-name>
+    	<servlet-class>com.sdzee.servlets.ParametresCategorie</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>ParametresCategorie</servlet-name>
+    	<url-pattern>/parametres-categorie</url-pattern>
+  	</servlet-mapping> 
+  	
+ <!-- ********************************** Supprimer un utilisateur ************************************* -->  
+ 	
+ 	<servlet>
+    	<servlet-name>DeleteUtilisateur</servlet-name>
+    	<servlet-class>com.sdzee.servlets.DeleteUtilisateur</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>DeleteUtilisateur</servlet-name>
+    	<url-pattern>/delete-utilisateur</url-pattern>
+  	</servlet-mapping> 
+  	
+  <!-- ********************************** Suprimer une catégorie ************************************** -->  
+  	
+  	<servlet>
+    	<servlet-name>DeleteCategorie</servlet-name>
+    	<servlet-class>com.sdzee.servlets.DeleteCategorie</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>DeleteCategorie</servlet-name>
+    	<url-pattern>/delete-categorie</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- ************************************* Supprimer une proposition ********************************* -->  
+   	
+  	<servlet>
+    	<servlet-name>DeleteProposition</servlet-name>
+    	<servlet-class>com.sdzee.servlets.DeleteProposition</servlet-class>
+  	</servlet>
+  
+   
+  	<servlet-mapping>
+    	<servlet-name>DeleteProposition</servlet-name>
+    	<url-pattern>/delete-proposition</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- ************************************** Supprimer une question *********************************** -->   	
+ 
+  	<servlet>
+    	<servlet-name>DeleteQuestion</servlet-name>
+    	<servlet-class>com.sdzee.servlets.DeleteQuestion</servlet-class>
+  	</servlet>
+   
+  	<servlet-mapping>
+    	<servlet-name>DeleteQuestion</servlet-name>
+    	<url-pattern>/delete-question</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- ********************************** Supprimer une groupe de question ***************************** -->  
+  	
+  	<servlet>
+    	<servlet-name>DeleteGroupe</servlet-name>
+    	<servlet-class>com.sdzee.servlets.DeleteGroupe</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>DeleteGroupe</servlet-name>
+    	<url-pattern>/delete-groupe</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- **************** Affiche la liste des utilisateurs dans la base de données *********************** -->
+ 
+  	<servlet>
+    	<servlet-name>listeUtilisateur</servlet-name>
+    	<servlet-class>com.sdzee.servlets.listeUtilisateur</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>listeUtilisateur</servlet-name>
+    	<url-pattern>/list-utilisateur</url-pattern>
+  	</servlet-mapping>
+  	
+<!-- ******************* Mise à jour des données de l'utilisateur via l'admnistrateur ******************* -->  
+
+ 	<servlet>
+    	<servlet-name>UpdateAdmin</servlet-name>
+    	<servlet-class>com.sdzee.servlets.UpdateAdmin</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>UpdateAdmin</servlet-name>
+    	<url-pattern>/update-utilisateur</url-pattern>
+  	</servlet-mapping> 
+  	
+<!-- ************************ Initialisation du mot de passe de l'utilisateur **************************** -->  
+
+ 	<servlet>
+    	<servlet-name>UpdateMotDePasseOublie</servlet-name>
+    	<servlet-class>com.sdzee.servlets.UpdateMotDePasseOublie</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>UpdateMotDePasseOublie</servlet-name>
+    	<url-pattern>/resetMotDePasse</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- *********** Modifier le mot de passe de l'utilisateur via son espace connecté ********************** -->  
+   	
+  	<servlet>
+    	<servlet-name>UpdateMotDePasse</servlet-name>
+    	<servlet-class>com.sdzee.servlets.UpdateMotDePasse</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>UpdateMotDePasse</servlet-name>
+    	<url-pattern>/modifier-mon-motDePasse</url-pattern>
+  	</servlet-mapping>
+  	
+  <!-- ******************************* Mise à jour d'une catégorie *************************************** -->  
+   	
+  	<servlet>
+    	<servlet-name>UpdateCategorie</servlet-name>
+    	<servlet-class>com.sdzee.servlets.UpdateCategorie</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>UpdateCategorie</servlet-name>
+    	<url-pattern>/mise-a-jour-categorie</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- ************************* Tous les scores des utilisateurs d'une catégorie ************************ --> 
+  
+ 	<servlet>
+    	<servlet-name>resultatAdministrateur</servlet-name>
+    	<servlet-class>com.sdzee.servlets.resultatAdministrateur</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>resultatAdministrateur</servlet-name>
+    	<url-pattern>/toutlesresultat</url-pattern>
+  	</servlet-mapping>
+  	
+  <!-- ************************ Le score de l'utilisateur d'une catégorie ******************************** -->  
+   	
+  	<servlet>
+    	<servlet-name>ResultatUtilisateur</servlet-name>
+    	<servlet-class>com.sdzee.servlets.ResultatUtilisateur</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>ResultatUtilisateur</servlet-name>
+    	<url-pattern>/mes-resultats</url-pattern>
+  	</servlet-mapping>
+  	
+<!-- ************************************* Accueil de l'utilisateur ************************************** -->  
+
+ 	<servlet>
+    	<servlet-name>AfficheCategorie</servlet-name>
+    	<servlet-class>com.sdzee.servlets.AfficheCategorie</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>AfficheCategorie</servlet-name>
+    	<url-pattern>/AccueilUtilisateur</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- ********************************* Accueil de l'administratreur ************************************** -->  
+ 
+ 	<servlet>
+    	<servlet-name>AdminListeCategories</servlet-name>
+    	<servlet-class>com.sdzee.servlets.AdminListeCategories</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>AdminListeCategories</servlet-name>
+    	<url-pattern>/AccueilAdministrateur</url-pattern>
+  	</servlet-mapping>
+  	
+  	
+<!-- ************************************* Répondre à une catégorie ************************************** -->  
+
+ 	<servlet>
+    	<servlet-name>RepondreQuestions</servlet-name>
+    	<servlet-class>com.sdzee.servlets.RepondreQuestions</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>RepondreQuestions</servlet-name>
+    	<url-pattern>/repondre-formulaire</url-pattern>
+  	</servlet-mapping>
+  	
+ <!-- ************************************* Diagramme JFreeChart ***************************************** -->  
+ 	<servlet>
+		<servlet-name>DisplayChart</servlet-name>
+		<servlet-class>org.jfree.chart.servlet.DisplayChart</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DisplayChart</servlet-name>
+		<url-pattern>/DisplayChart</url-pattern>
+	</servlet-mapping> 
+	
+	<servlet>
+		<servlet-name>DiagrammeAdmin</servlet-name>
+		<servlet-class>com.sdzee.servlets.DiagrammeAdmin</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DiagrammeAdmin</servlet-name>
+		<url-pattern>/diagrammeAdmin</url-pattern>
+	</servlet-mapping>
+</web-app>
