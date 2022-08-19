@@ -7,4 +7,6 @@
 4. Rhidine Andriamihaja
 
 ## Démonstration ##
-https://www.youtube.com/watch?v=CdCUxKj7Z4o
+Video : https://www.youtube.com/watch?v=CdCUxKj7Z4o
+
+Pdf sur le Git du projet : principales-fonctionnalites.pdf
