@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+fieldset{
+    background-color : white;
+    border-radius: 5px;
+    border-color : #0B7292;
+    border-width:  2px;
+    border-style : solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset a {
+	text-decoration: none;
+}
+
+legend{
+	color : #0B7292;
+	font-size : 24px;
+	font-weight: bold;
+}
+
+form{
+	color : black;
+	border-radius : 5px;
+	margin: 20px 20px 20px;
+	background-color : white;
+}
+
+#connexion label {
+  	font-size : 20px;
+}
+
+label {
+  	margin-left: 20px;
+}
+
+input{
+  	display : block;
+  	margin-bottom : 10px;
+  	margin-left: 20px;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=date] {
+	width: 50%;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	padding: 12px 20px 12px 40px;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+	display : inline;
+}
+
+#connexion input[type="button"]{
+		font-size: 1.3em;
+}
+
+#connexion input[type="submit"]{
+		font-size: 1.3em;
+}
+
+#inscription input[type="button"]{
+		font-size: 1.3em;
+}
+
+#inscription input[type="submit"]{
+		font-size: 1.3em;
+}
+
+#inscription input[type="reset"]{
+		font-size: 1.3em;
+}
+
+
+label[for="homme"], label[for="femme"]{
+  	font-weight: normal;
+}
+
+input[type=radio] {
+  	display: inline;
+}
+
+input[type=checkbox] {
+  	display: inline;
+  	margin-left: 40px;
+  	margin-top: 15px;
+}
+
+.button_center{
+	text-align : center;
+}
+
+img {
+	max-width: 100%;
+	border-radius: 5px;
+	box-shadow: 4px 4px 2px gray;
+	float: right;
+	border: 2px solid gray;
+	width: 600px;
+	float: right;
+}
+
+h3{
+	font-size : 1.7em !important;
+	text-align : center;
+}
+
+.p1 {
+	font-weight: bold;
+}
+
+#test{
+	font-size: 1.3em;
+	font-weight : bold;
+}
+
+#motDePasseOublie input[type='submit'], #DonneeUtilisateur input[type='submit']{
+	display: block;
+  margin : auto;
+}

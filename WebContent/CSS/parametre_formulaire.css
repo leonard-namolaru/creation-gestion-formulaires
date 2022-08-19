@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+.supprimer_groupe_de_questions, .supprimer_q{
+	margin-left : 0px;
+	display : inline;
+	color : #a8351e;
+}
+
+.supprimer_proposition{
+	display : block;
+	font-size : 12px;
+	clear : both;
+	margin-left: 0px;
+	color: black;
+}
+
+
+fieldset{
+    border-radius: 5px;
+    border-color : #0B7292;
+    border-width:  2px;
+    border-style : solid;
+    font-size : 18px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom : 40px;
+}
+
+fieldset fieldset{
+    width: 80%;
+    clear : both;
+}
+
+fieldset a {
+	text-decoration: none;
+	display: block;
+	margin: 5px;
+	margin-left: 40px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+}
+
+legend{
+	color : #0B7292;
+	font-size : 24px;
+	font-weight: bold;
+}
+
+form{
+	background-color : white;
+	color : black;
+	border-radius : 5px;
+	padding : 10px;
+	margin: 25px;
+}
+
+#connexion label {
+  	font-size : 20px;
+}
+
+
+input{
+	display : block;
+	margin-bottom : 10px;
+	width: 99%;
+}
+
+#submit_button {
+	display : block;
+	margin-bottom : 10px;
+	width: 99% !important;
+	float: none;
+}
+
+select {
+	width: 57%;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	padding: 12px 20px 12px 40px;
+	margin-bottom : 10px;    
+}
+
+
+input[type="text"]{
+	width: 50%;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	padding: 12px 20px 12px 40px;
+	display : block;
+	clear : both;
+}
+
+label[for *= "champ_obligatoire"], label[for *= "champ_pas_obligatoire"], .label_champ_obligatoire{
+  	font-weight: normal;
+}
+
+input[type="radio"] {
+	display: inline;
+	width: auto;
+}
+
+input[type="button"] {
+	width : auto !important;
+	float : left;
+}
+
+
+input[type=checkbox] {
+	display: inline;
+	margin-left: 40px;
+	margin-top: 15px;
+}
+
+.titre_reponses  {
+	margin-top : 20px;
+	margin-bottom : 10px;
+	font-size : 16px;
+	font-weight: bold;
+
+}
+
+fieldset .proposition_sup{
+  border-color: lightblue;
+}
+
+.proposition {
+	margin-top: 70px;
+	overflow: hidden;
+}
+
+.input {
+	display: inline-block;
+	width: 90%;
+}
+
+.description {
+    font-size: 15px;
+    color: black;
+    margin: 0px 15px 20px 15px;
+    font-weight : bold;
+}

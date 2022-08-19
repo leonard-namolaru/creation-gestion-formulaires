@@ -1,0 +1,15 @@
+fieldset {
+	border-radius: 5px;
+	border-color : #4BC1E7;
+	border-width:  3px;
+	font-size : 18px;
+	color : black;
+}
+
+#categorie fieldset {
+	border-color: white;
+}
+
+fieldset h2 {
+  	text-align: center;
+}

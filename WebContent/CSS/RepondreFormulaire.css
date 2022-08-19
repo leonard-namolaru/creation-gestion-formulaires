@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+
+form {
+	margin-bottom : 15px;
+}
+
+section .description {
+    font-size: 15px;
+    color: black;
+    margin: 0px 15px 20px 15px;
+    font-weight : bold;
+}
+
+fieldset{
+	  border-radius: 5px;
+    border-color : #0B7292;
+    border-width:  2px;
+    border-style : solid;
+    font-size : 15px;
+    color : black;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+legend{
+	color : #0B7292;
+	font-size : 24px;
+	font-weight: bold;
+	padding : 4px;
+}
+
+input[type="text"], select{
+  width: 85%;
+}
+
+input[type="submit"] {
+  display : block;
+  margin-top : 20px;
+  margin-bottom : 20px;
+  width : 90%;
+}
+
+.question{
+  margin: 10px;
+} 
+
+.numeroQuestion{
+  font-size : 18px;
+  font-weight: bold;
+} 
+
+.labelQuestion{
+  font-size : 20px;
+  font-weight: bold;
+} 
+
+.proposition {
+  margin: 15px;
+  font-weight: normal;
+}
+
+.proposition label {
+	font-weight: normal;
+}
+
+.obligatoire {
+  color:red;
+}
+
+input[type='text'] {
+  display: block;
+}

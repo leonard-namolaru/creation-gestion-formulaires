@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.categorie ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 10px;   
+}
+
+.categorie li {
+	width: auto;
+	text-align: center;
+	display: block ;
+	border: 2px solid #e7e7e7;
+	background-color: #D0EAC6;
+	padding: 25px;
+	margin: 25px;
+}
+
+.categorie li a{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+} 
+
+.categorie a:hover {
+	margin: 25px;
+	padding: 25px;
+	background-color: #D0EAB4;
+}

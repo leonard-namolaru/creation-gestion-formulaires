@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+table {
+  display:table;
+  width: 100%;
+  table-layout:fixed;
+  border-collapse: collapse;
+}
+
+
+tr#titre{
+   /* Source : https://www.colorzilla.com/gradient-editor/
+   * Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+   background: rgb(179,220,237); /* Old browsers */
+   background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+tr:hover {
+    background-color: #AFDBED;
+}
+
+td, th {  
+  text-align: center;
+  padding : 8px;
+  border: 1px solid #ddd;
+  overflow: hidden; /*Caché au-delà de la largeur*/
+  text-overflow: ellipsis; /*Les caractères cachés sont indiqués par des points de suspension*/
+}
+
+
+th {
+  font-size : 25px;   
+}
+
+
+td:first-child {
+  font-size : 24px;
+  font-weight: bold;
+}
+
+td a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+  box-shadow: 1px 1px 1px ##D0EAC6;
+  background-color: #f3f3f3;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding : 2px 2px 2px 2px;
+  margin: 5px 5px 4px;
+}
+
+td a:hover {
+    background-color: #AFDBED;
+}
+
+td a {
+  font-size: 12px;
+  overflow: hidden; /*Caché au-delà de la largeur*/
+  text-overflow: ellipsis; /*Les caractères cachés sont indiqués par des points de suspension*/
+}
+
+.liste_utilisateur .email {
+  width: 30%;
+}
+
+.liste_utilisateur .sexe {
+  width: 5%;
+}
+
+.liste_utilisateur .dateNaissance {
+  width: 10%;
+}
+
+.action {
+  width: 10%;
+}
+
+.liste_utilisateur .dateInscription {
+  width: 10%;
+}
+
+.diagramme {
+  	text-align: center;
+  	font-size: 15px;
+    float: right;
+    margin: 20px;
+}
+
+.diagramme a{
+  /* Source : https://www.colorzilla.com/gradient-editor/
+   * Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+   background: rgb(179,220,237); /* Old browsers */
+   background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  
+	border-radius : 10px;
+	width: 60px;
+	font-weight : bold;
+	padding : 10px;  
+	border: 1px solid #ededed;
+	color: #3e3e3e;
+  
+  
+}
+
+.diagramme a:hover {
+	color: black;
+	border-color: black;
+	background-color: #ededed;
+}
+
+.total {
+  font-size: 20px;
+  float: right;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.nombre {
+  /* Source : https://www.colorzilla.com/gradient-editor/
+	 * Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+	background: rgb(179,220,237); /* Old browsers */
+	background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+ 	border: 2px solid lightblue;
+  	padding-left: 5px;
+    padding-right: 5px;
+}

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Alef&display=swap');
+
+html {
+	font-size: 100%;
+}
+
+body {
+	/* Source : https://www.colorzilla.com/gradient-editor/
+	 * Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+	background: rgb(179,220,237); /* Old browsers */
+	background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  
+	font-family: 'Alef';
+	width: auto; 
+	height: 100%;
+	margin : 20px;
+	color : black;
+	font-size: 15px; /* Pour les navigateurs qui ne supportent pas le Rem */
+	font-size: 1rem; /* Pour les navigateurs « Responsive » */
+}
+
+
+/*Mise en page de l'en-tete*/
+header {
+	/* Source : https://www.colorzilla.com/gradient-editor/
+	 * Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+	background: rgb(179,220,237); /* Old browsers */
+	background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	margin: 0px;
+	padding : 30px 0px 10px 10px;
+	border-radius: 5px;
+	box-shadow : 5px 12px 12px black;
+}
+
+header h1 {
+	color : white;	
+	margin : 10px;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+header .deconnexion a, .inscription a, .connexion_ins a{
+    position : absolute;
+    right : 35px;
+    top : 45px;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding : 12px;
+    background-color : #ABDBED;
+    color : #0C3B4A;
+    font-weight : bold;
+    font-size: 20px; /* Pour les navigateurs qui ne supportent pas le Rem */
+	  font-size: 1.3rem; /* Pour les navigateurs « Responsive » */
+}
+
+header .connexion a {
+	position : absolute;
+    right : 173px;
+    top : 45px;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding : 12px;
+    background-color : #ABDBED;
+    color : #0C3B4A;
+    font-weight : bold;
+    font-size: 20px; /* Pour les navigateurs qui ne supportent pas le Rem */
+	  font-size: 1.3rem; /* Pour les navigateurs « Responsive » */
+}
+
+header .deconnexion a:hover, .inscription a:hover, .connexion a:hover{
+    /* Source : https://www.colorzilla.com/gradient-editor/
+	 * Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+	background: rgb(179,220,237); /* Old browsers */
+	background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color : white;
+}
+
+/* Navigation */
+nav {
+	font-size: 1rem;
+	margin-top: 20px;
+	color: white;
+	padding : 10px;
+}
+
+nav ul {
+	/* Source : https://www.colorzilla.com/gradient-editor/
+	 * Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+	background: rgb(179,220,237); /* Old browsers */
+	background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	border: 1px solid #e7e7e7;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #AFDBED;
+}
+
+nav li a.active {
+    color: black;
+    background-color: #34BBE6;
+    font-weight : bold;
+
+}
+
+section {
+ 	margin-right: auto;
+	margin-left: auto;
+}
+
+section h2 {
+    font-size: 30px;
+    color: black;
+    margin: 35px 15px 4px 15px;
+}
+
+section h3 {
+    font-size: 19px;
+    color: black;
+    margin: 0px 15px 20px 15px;
+}
+
+/*Article*/
+article{
+	margin: 15px;  
+	background-color : white;
+	padding : 30px;
+	border-width: 2px;
+	border-radius: 10px;
+	border: 1px solid #4BC1E7;
+}
+
+article#connexion , article#inscription, article#parametres{
+  	padding : 0px;
+}
+
+/*Input, Select, Label*/
+input[type=text] {
+	width: 100%;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: white;
+	padding: 12px 20px 12px 40px;
+}
+
+select {
+	width: 100%;
+	padding: 16px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+	/* Source : https://www.colorzilla.com/gradient-editor/
+	Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+	background: rgb(179,220,237); /* Old browsers */
+	background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  
+	font-family: 'Alef';
+	font-size: 15px;
+	color : white;
+	/*border-color: #062E69;*/
+	border-radius : 10px;
+	border-width : 2px;
+	font-weight : bold;
+	padding : 10px;
+	margin-left : auto;
+	margin-right : auto;
+	margin-bottom: 10px;
+}
+
+label{
+  	font-weight: bold;
+}
+
+.page {
+  	text-align: center;
+  	font-size: 19px;
+}
+
+.page a {
+	/* Source : https://www.colorzilla.com/gradient-editor/
+	Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+	background: rgb(179,220,237); /* Old browsers */
+	background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	border-radius : 10px;
+	border-width : 2px;
+	font-weight : bold;
+	padding : 10px;  
+	margin: 5px;
+	display: inline-block;
+	border: 1px solid #ededed;
+	color: #3e3e3e;
+	text-decoration: none;
+}
+
+.page a:hover {
+	color: black;
+	border-color: black;
+	background-color: #ededed;
+}
+
+.erreur 
+{
+    color: red;
+    margin: 15px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.succes
+{
+    color: rgb(0, 121, 0);
+    margin: 15px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+#succes_admin, .succes_utilisateur {
+    color : black;
+    margin : 15px 15px 0px 15px;
+    font-size : 15px;
+}
+
+.disabled {
+	cursor: not-allowed;
+	opacity: 0.3;	
+}
+
+.disabled:active {
+	pointer-events: none;
+}
+
+#ajouteCategorie{
+	font-size : 20px;
+}
